@@ -1,0 +1,27 @@
+{
+  "total_reviewed": 111,
+  "reviewed_and_verified": 111,
+  "category_counts": {
+    "Writing": 14,
+    "College Life": 27,
+    "Experience": 7,
+    "Certifides": 47,
+    "Achievements": 4,
+    "Institutional & Governance": 3,
+    "Conferences": 1,
+    "Explores": 4,
+    "Projects": 4
+  },
+  "author_counts": {
+    "MSEC EDC": 28,
+    "JavaScript": 1,
+    "Vijayaregunath T": 78,
+    "Jeba Shelton": 3,
+    "Yogesh Malairajan": 1
+  },
+  "public_feature_count": 63,
+  "gallery_item_count": 41,
+  "repost_archive_count": 2,
+  "supporting_evidence_count": 5,
+  "copied_public_assets_count": 321
+}

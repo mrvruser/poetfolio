@@ -1,0 +1,146 @@
+[
+  {
+    "filename": "home-desktop-dark.png",
+    "route": "/",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 314671,
+    "notes": "Home page hero, 3D flip card, and bento metrics at 1440px desktop.",
+    "captured_at": "2026-10-28T22:47:29.486092"
+  },
+  {
+    "filename": "home-mobile-dark.png",
+    "route": "/",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 84754,
+    "notes": "Home page responsive mobile layout at 390px.",
+    "captured_at": "2026-10-28T22:47:32.578184"
+  },
+  {
+    "filename": "about-desktop-dark.png",
+    "route": "/about",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 137567,
+    "notes": "About page narrative, origin story, and verified academic metrics.",
+    "captured_at": "2026-10-28T22:47:34.817013"
+  },
+  {
+    "filename": "about-mobile-dark.png",
+    "route": "/about",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 52033,
+    "notes": "About page mobile layout at 390px.",
+    "captured_at": "2026-10-28T22:47:36.918360"
+  },
+  {
+    "filename": "projects-desktop-dark.png",
+    "route": "/projects",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 118655,
+    "notes": "Projects creations gallery with category filter pills.",
+    "captured_at": "2026-10-28T22:47:38.992558"
+  },
+  {
+    "filename": "projects-mobile-dark.png",
+    "route": "/projects",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 54752,
+    "notes": "Projects page mobile card stack at 390px.",
+    "captured_at": "2026-10-28T22:47:41.128105"
+  },
+  {
+    "filename": "odyssey-desktop-dark.png",
+    "route": "/odyssey",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 91439,
+    "notes": "The Learning Odyssey 4-chapter narrative canvas.",
+    "captured_at": "2026-10-28T22:47:43.360950"
+  },
+  {
+    "filename": "odyssey-mobile-dark.png",
+    "route": "/odyssey",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 52675,
+    "notes": "Learning Odyssey mobile tab navigation at 390px.",
+    "captured_at": "2026-10-28T22:47:45.418190"
+  },
+  {
+    "filename": "writing-desktop-dark.png",
+    "route": "/writing",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 468404,
+    "notes": "Writing & Insights editorial grid with series filters.",
+    "captured_at": "2026-10-28T22:47:47.864388"
+  },
+  {
+    "filename": "writing-mobile-dark.png",
+    "route": "/writing",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 144913,
+    "notes": "Writing page responsive cards at 390px.",
+    "captured_at": "2026-10-28T22:47:49.937384"
+  },
+  {
+    "filename": "contact-desktop-dark.png",
+    "route": "/contact",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 87686,
+    "notes": "Contact & verified footprint page at 1440px desktop.",
+    "captured_at": "2026-10-28T22:47:52.076243"
+  },
+  {
+    "filename": "contact-mobile-dark.png",
+    "route": "/contact",
+    "viewport": "390x844",
+    "theme": "dark",
+    "size_bytes": 45672,
+    "notes": "Contact page mobile layout at 390px.",
+    "captured_at": "2026-10-28T22:47:54.131149"
+  },
+  {
+    "filename": "home-desktop-light.png",
+    "route": "/",
+    "viewport": "1440x900",
+    "theme": "light",
+    "size_bytes": 315738,
+    "notes": "Home page in Literary Parchment light world theme.",
+    "captured_at": "2026-10-28T22:47:56.484208"
+  },
+  {
+    "filename": "writing-desktop-light.png",
+    "route": "/writing",
+    "viewport": "1440x900",
+    "theme": "light",
+    "size_bytes": 468600,
+    "notes": "Writing page in Literary Parchment light world theme.",
+    "captured_at": "2026-10-28T22:47:58.646645"
+  },
+  {
+    "filename": "project-detail-modal-desktop.png",
+    "route": "/projects",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 328762,
+    "notes": "Detailed project view modal showing architecture and tech tags.",
+    "captured_at": "2026-10-28T22:48:02.074147"
+  },
+  {
+    "filename": "writing-detail-modal-desktop.png",
+    "route": "/writing",
+    "viewport": "1440x900",
+    "theme": "dark",
+    "size_bytes": 322543,
+    "notes": "Full article reader modal displaying essay content and external links.",
+    "captured_at": "2026-10-28T22:48:05.394866"
+  }
+]
