@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { projects, Project } from "@/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectModal from "@/components/ProjectModal";
@@ -26,7 +27,7 @@ export default function Projects() {
             Portfolio Showcase
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif-title mb-4">
-            Curated Creations & Engineering
+            Curated Creations &amp; Engineering
           </h2>
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-secondary leading-relaxed">
             From autonomous multi-agent cognitive systems and computer vision kinematics to enterprise campus accreditation platforms and rural commerce architectures.
@@ -73,7 +74,7 @@ export default function Projects() {
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedProject(p)}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl border transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl"
+                className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-3xl border transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl overflow-hidden"
                 style={{
                   backgroundColor: "var(--glass-card-bg)",
                   borderColor: "var(--border-subtle)",
@@ -82,57 +83,78 @@ export default function Projects() {
                 }}
               >
                 <div>
-                  {/* Category & Status Indicator */}
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-theme bg-surface-theme text-accent-theme inline-flex items-center gap-1.5">
-                      <CreationsIcon size={12} />
-                      <span>{p.category}</span>
-                    </span>
+                  {/* Visual Media Showcase */}
+                  <div className="relative w-full h-48 rounded-2xl overflow-hidden bg-slate-900 border border-theme mb-5 group-hover:border-accent-theme transition-colors">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    
+                    {/* Media Type Badge */}
+                    <div className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md border border-white/10 text-[10px] font-semibold text-accent-theme uppercase tracking-wider">
+                      {p.imageType}
+                    </div>
+
                     {p.featured && (
-                      <span className="text-[10px] font-semibold tracking-wide uppercase px-2.5 py-0.5 rounded-full border border-accent-theme bg-surface-theme text-accent-theme inline-flex items-center gap-1">
-                        <SparklesIcon size={11} />
+                      <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-accent-theme/40 text-[9px] font-bold text-accent-theme uppercase tracking-wider inline-flex items-center gap-1">
+                        <SparklesIcon size={10} />
                         <span>Featured</span>
-                      </span>
+                      </div>
                     )}
                   </div>
 
+                  {/* Category Pill */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-theme bg-surface-theme text-accent-theme inline-flex items-center gap-1">
+                      <CreationsIcon size={11} />
+                      <span>{p.category}</span>
+                    </span>
+                    <span className="text-[11px] text-tertiary font-medium">
+                      {p.authorship.split("(")[0].trim()}
+                    </span>
+                  </div>
+
                   {/* Title & Tagline */}
-                  <h3 className="text-xl sm:text-2xl font-bold font-serif-title mb-2 group-hover:text-accent-theme transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold font-serif-title mb-1.5 group-hover:text-accent-theme transition-colors leading-snug">
                     {p.title}
                   </h3>
-                  <p className="text-xs font-medium text-accent-theme mb-3">
+                  <p className="text-xs font-medium text-accent-theme mb-2.5">
                     {p.tagline}
                   </p>
 
                   {/* Short Description */}
-                  <p className="text-sm leading-relaxed text-secondary mb-6 line-clamp-3">
+                  <p className="text-xs sm:text-sm leading-relaxed text-secondary mb-5 line-clamp-3">
                     {p.description}
                   </p>
                 </div>
 
                 <div>
                   {/* Tech Stack Pills */}
-                  <div className="flex flex-wrap gap-1.5 mb-5">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {p.tech.slice(0, 4).map((t, idx) => (
                       <span
                         key={idx}
-                        className="text-[11px] font-medium px-2.5 py-1 rounded-lg border border-theme bg-surface-theme/70 text-secondary"
+                        className="text-[10px] font-medium px-2 py-0.5 rounded-md border border-theme bg-surface-theme/70 text-secondary"
                       >
                         {t}
                       </span>
                     ))}
                     {p.tech.length > 4 && (
-                      <span className="text-[11px] font-medium px-2 py-1 rounded-lg border border-theme text-secondary">
+                      <span className="text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-theme text-secondary">
                         +{p.tech.length - 4}
                       </span>
                     )}
                   </div>
 
                   {/* Footer Action */}
-                  <div className="pt-4 border-t border-theme flex items-center justify-between text-xs font-semibold text-accent-theme">
-                    <span>Explore Architecture & Metrics</span>
+                  <div className="pt-3.5 border-t border-theme flex items-center justify-between text-xs font-semibold text-accent-theme">
+                    <span>Explore Architecture &amp; Metrics</span>
                     <ArrowRightIcon
-                      size={15}
+                      size={14}
                       strokeWidth={2}
                       className="transform group-hover:translate-x-1.5 transition-transform"
                     />

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#0c0f17; font-family:system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0066cc" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="#090c13"/>
+  <rect width="800" height="450" fill="url(#bgGlow)"/>
+  <!-- Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <path d="M0 50h800 M0 100h800 M0 150h800 M0 200h800 M0 250h800 M0 300h800 M0 350h800 M0 400h800"/>
+    <path d="M50 0v450 M150 0v450 M250 0v450 M350 0v450 M450 0v450 M550 0v450 M650 0v450 M750 0v450"/>
+  </g>
+  <!-- Header Badge -->
+  <rect x="30" y="24" width="180" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="120" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">SYSTEM ARCHITECTURE</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">ATTS — Institutional Accreditation Engine</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">MSEC IQAC • 5-Tier RBAC &amp; Dual-Database Cluster (MongoDB + MySQL)</text>
+
+  <!-- Flow Nodes -->
+  <!-- Node 1: Client Layers -->
+  <g transform="translate(40, 140)">
+    <rect width="180" height="230" rx="16" fill="#131722" stroke="#00F5D4" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="90" y="32" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">1. Client Layer</text>
+    <rect x="20" y="55" width="140" height="36" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="90" y="78" fill="#F0F4F8" font-size="11" text-anchor="middle">Super Admin &amp; Principal</text>
+    <rect x="20" y="100" width="140" height="36" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="90" y="123" fill="#F0F4F8" font-size="11" text-anchor="middle">HOD &amp; Coordinators</text>
+    <rect x="20" y="145" width="140" height="36" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="90" y="168" fill="#F0F4F8" font-size="11" text-anchor="middle">100+ Faculty Portals</text>
+    <text x="90" y="210" fill="#8B9BB0" font-size="10" text-anchor="middle">React.js • Tailwind • Chart.js</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M220 255h70" stroke="#00F5D4" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="290 255 282 250 282 260" fill="#00F5D4"/>
+
+  <!-- Node 2: Security & Routing Engine -->
+  <g transform="translate(300, 140)">
+    <rect width="200" height="230" rx="16" fill="#131722" stroke="#00F5D4" stroke-opacity="0.6" stroke-width="1.5"/>
+    <text x="100" y="32" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">2. Security &amp; Workflow</text>
+    <rect x="20" y="55" width="160" height="42" rx="8" fill="#1a2336" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="100" y="80" fill="#F0F4F8" font-size="11" font-weight="600" text-anchor="middle">5-Tier JWT RBAC Engine</text>
+    <rect x="20" y="108" width="160" height="42" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="100" y="133" fill="#F0F4F8" font-size="11" text-anchor="middle">9 NAAC/NBA Criteria Logic</text>
+    <rect x="20" y="160" width="160" height="42" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="100" y="185" fill="#F0F4F8" font-size="11" text-anchor="middle">Academic Lifecycle State</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M500 255h70" stroke="#00F5D4" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="570 255 562 250 562 260" fill="#00F5D4"/>
+
+  <!-- Node 3: Persistence Cluster -->
+  <g transform="translate(580, 140)">
+    <rect width="180" height="230" rx="16" fill="#131722" stroke="#00F5D4" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="90" y="32" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">3. Data Cluster</text>
+    <rect x="20" y="55" width="140" height="60" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="90" y="82" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">MySQL Relational</text>
+    <text x="90" y="100" fill="#8B9BB0" font-size="10" text-anchor="middle">Evaluations &amp; Port 3306</text>
+    <rect x="20" y="130" width="140" height="60" rx="8" fill="#1c2233" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="90" y="157" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">MongoDB Store</text>
+    <text x="90" y="175" fill="#8B9BB0" font-size="10" text-anchor="middle">Criteria &amp; Dynamic Schemas</text>
+  </g>
+</svg>

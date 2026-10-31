@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="220" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="140" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">HYBRID ENSEMBLE RESEARCH</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">Network Packet Anomaly Classifier</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">Supervised + Isolation Forest Ensemble • Collaborator: Muthumani P • Packet Traffic Detection</text>
+
+  <g transform="translate(60, 160)">
+    <rect width="200" height="180" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="100" y="35" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">Supervised Branch</text>
+    <text x="100" y="70" fill="#F0F4F8" font-size="11" text-anchor="middle">Random Forest (w=0.35)</text>
+    <text x="100" y="100" fill="#F0F4F8" font-size="11" text-anchor="middle">XGBoost (w=0.35)</text>
+    <text x="100" y="140" fill="#8B9BB0" font-size="10" text-anchor="middle">Known Signature Matching</text>
+  </g>
+
+  <path d="M260 250h80" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(340, 140)">
+    <rect width="180" height="220" rx="16" fill="#151b29" stroke="#00F5D4" stroke-width="2"/>
+    <text x="90" y="35" fill="#00F5D4" font-size="13" font-weight="800" text-anchor="middle">Voting Engine</text>
+    <text x="90" y="75" fill="#F0F4F8" font-size="11" text-anchor="middle">Weighted Soft-Voting</text>
+    <text x="90" y="105" fill="#F0F4F8" font-size="11" text-anchor="middle">Threshold Calibration</text>
+    <text x="90" y="145" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle">Zero-Day Isolation</text>
+  </g>
+
+  <path d="M520 250h80" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(600, 160)">
+    <rect width="150" height="180" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="75" y="35" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">Unsupervised</text>
+    <text x="75" y="70" fill="#F0F4F8" font-size="11" text-anchor="middle">Isolation Forest</text>
+    <text x="75" y="100" fill="#8B9BB0" font-size="10" text-anchor="middle">Novel anomaly clustering</text>
+  </g>
+</svg>

@@ -119,7 +119,7 @@ export default function Contact() {
                   <ExternalLinkIcon size={12} opacity={0.6} />
                 </a>
                 <a
-                  href="https://github.com/vijayaregunath-t"
+                  href="https://github.com/mrvruser"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-2xl border border-theme bg-surface-theme hover:border-accent-theme hover:text-accent-theme hover:scale-103 transition-all flex items-center justify-center gap-2"

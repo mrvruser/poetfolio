@@ -41,7 +41,7 @@ export default function About() {
                 Languages & Cultural Roots
               </span>
               <p className="text-xs sm:text-sm text-secondary">
-                <strong>Tamil</strong> (Native Mother Tongue) • <strong>English</strong> (Professional Working) • <strong>Spanish</strong> (Beginner) • <strong>German</strong> (Beginner) | State-Level Chorus Singer (VIT Chennai) & 2nd Prize in State Slam Poetry.
+                <strong>Tamil</strong> (Native Mother Tongue) • <strong>English</strong> (Professional Working) • <strong>Spanish</strong> (Beginner) • <strong>German</strong> (Beginner) | 2nd Prize in State Slam Poetry & Creative Writing.
               </p>
             </div>
           </div>

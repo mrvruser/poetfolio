@@ -307,6 +307,23 @@ export default function LearningOdyssey() {
                           </span>
                         </div>
 
+                        {c.thumbnailUrl && (
+                          <div className="relative w-full h-32 rounded-xl overflow-hidden border border-theme bg-surface-theme/90 my-2">
+                            <Image
+                              src={c.thumbnailUrl}
+                              alt={c.title}
+                              fill
+                              className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                              <span className="text-[10px] text-white font-medium bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded">
+                                Document Cover Preview
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
                         <h4 className="text-base font-bold font-serif-title leading-snug text-primary group-hover:text-accent-theme transition-colors">
                           {c.title}
                         </h4>

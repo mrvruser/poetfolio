@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ResumeModal from "@/components/ResumeModal";
 import {
   ArrowDownIcon,
   ArrowRightIcon,
@@ -18,6 +19,7 @@ import {
 
 export default function Hero() {
   const [imgError, setImgError] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const verifiedMetrics = [
     { value: "9.76", label: "Current SGPA", sub: "10.0 Scale" },
@@ -34,7 +36,7 @@ export default function Hero() {
     },
     {
       name: "GitHub",
-      href: "https://github.com/vijayaregunath-t",
+      href: "https://github.com/mrvruser",
       icon: <GitHubIcon size={16} />,
     },
     {
@@ -168,16 +170,16 @@ export default function Hero() {
               <span>Let’s Connect</span>
             </a>
 
-            {/* Tertiary Action: Verified Resume */}
-            <a
-              href="/resume.pdf"
-              download="T_VIJAYAREGUNATH_RESUME.pdf"
+            {/* Tertiary Action: Verified Resume Modal & Download */}
+            <button
+              type="button"
+              onClick={() => setIsResumeOpen(true)}
               className="px-5 sm:px-6 py-3.5 rounded-2xl font-semibold text-xs sm:text-sm border border-theme bg-card-theme/60 hover:border-accent-theme hover:text-accent-theme hover:scale-105 active:scale-95 transition-all duration-300 text-secondary inline-flex items-center gap-2"
-              title="Download official verified placement resume (PDF)"
+              title="Inspect official verified placement resume & download formats"
             >
               <DocumentResumeIcon size={17} />
               <span>Verified Resume</span>
-            </a>
+            </button>
           </motion.div>
 
           {/* Verified Social Channels Strip */}
@@ -324,6 +326,9 @@ export default function Hero() {
           />
         </a>
       </motion.div>
+
+      {/* Interactive Official Verified Resume Showcase Modal */}
+      <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
     </section>
   );
 }

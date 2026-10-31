@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="220" height="26" rx="13" fill="#B8860B" fill-opacity="0.15" stroke="#B8860B" stroke-opacity="0.3"/>
+  <text x="140" y="41" fill="#B8860B" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">3D WEBGL CLIENT SHOWCASE</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">Spatial Architecture Portfolio — Mr. Eswin Antony</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">Three.js • Anime.js • Interactive Dolly Camera • Commercial Client Deployment</text>
+
+  <g transform="translate(60, 140)">
+    <rect width="680" height="250" rx="16" fill="#131622" stroke="#B8860B" stroke-opacity="0.4"/>
+    <!-- Wireframe Isometric Cube -->
+    <polygon points="200 190 280 150 360 190 280 230" fill="#B8860B" fill-opacity="0.1" stroke="#B8860B" stroke-width="1.5"/>
+    <polygon points="200 190 280 230 280 320 200 280" fill="#B8860B" fill-opacity="0.2" stroke="#B8860B" stroke-width="1.5"/>
+    <polygon points="360 190 280 230 280 320 360 280" fill="#B8860B" fill-opacity="0.15" stroke="#B8860B" stroke-width="1.5"/>
+
+    <text x="440" y="80" fill="#F0F4F8" font-size="14" font-weight="700">Interactive 3D Walkthrough</text>
+    <text x="440" y="110" fill="#8B9BB0" font-size="11">• WebGL Hardware Accelerated Rendering</text>
+    <text x="440" y="135" fill="#8B9BB0" font-size="11">• OrbitControls with bounded boundary clamps</text>
+    <text x="440" y="160" fill="#8B9BB0" font-size="11">• Real-time PBR material lighting</text>
+    <text x="440" y="185" fill="#8B9BB0" font-size="11">• Blueprint elevation switching via Anime.js</text>
+  </g>
+</svg>

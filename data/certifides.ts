@@ -25,7 +25,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-11-27T13:27:39.319Z",
     "description": "Proud to announce that I\u2019ve completed the PostgreSQL: Become an SQL Developer course on November 27th, 2024, and earned a Completion Certificate from Simplilearn! Diving deep into SQL and mastering PostgreSQL was an enriching experience that has supercharged my database developme",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-009_LI-POST-009_PostgreSQL_-_SimpliLearn.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-009_LI-POST-009_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-009_LI-POST-009_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Simplilearn"
@@ -40,7 +40,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2026-08-27T07:33:08.149Z",
     "description": "Foundations of Deep Learning: Concepts and Applications | NPTEL Certification I am delighted to share that I have successfully completed the NPTEL Online Certification Course \u2013 Foundations of Deep Learning: Concepts and Applications, funded by the MINISTRY OF EDUCATION, GOVERNMEN",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-016_LI-POST-016_Foundations_Of_Deep_Learning_-_NPTEL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-016_LI-POST-016_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-016_LI-POST-016_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -53,7 +53,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2025-05-11T08:57:11.786Z",
     "description": "Achievement Unlocked! Proud to share that I have successfully completed the HTML Training organized at Mohamed Sathak Engineering College under the guidance of RUBA A, with course materials provided by the Spoken Tutorial Project, IIT Bombay. I passed the online examination with ",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-017_LI-POST-017_HTML_Training_-_Spoken_Tutorial_IIT_Bombay.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-017_LI-POST-017_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-017_LI-POST-017_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Mohamed Sathak Engineering College",
@@ -69,7 +69,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2025-11-05T15:15:26.628Z",
     "description": "I\u2019m delighted to announce that I\u2019ve successfully completed the Arduino Training organized at Mohamed Sathak Engineering College, conducted by EduPyramids, SINE (Society for Innovation and Entrepreneurship), IIT Bombay. Scored 92.50% and earned 3 Credits in this hands-on program t",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-030_LI-POST-030_IOT-IIT_BOMBAY_SPOKEN_TUTORIAL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-030_LI-POST-030_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-030_LI-POST-030_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Mohamed Sathak Engineering College",
@@ -85,7 +85,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-09-08T09:16:23.883Z",
     "description": "\"Thrilled to have participated in an Ethical Hacking workshop at SDLC Skill Development Learning Centre in Madurai on 08/09/2024. This hands-on experience deepened my understanding of cybersecurity practices and ethical hacking techniques. Looking forward to applying this knowled",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-035_LI-POST-035_Ethical_Hacking_SDLC_Certification.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-035_LI-POST-035_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-035_LI-POST-035_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -113,7 +113,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2026-01-05T09:08:55.664Z",
     "description": "Achievement Unlocked | NPTEL Certification Proud to share that I have successfully completed the 12-week NPTEL course on \u201cIntroduction to Large Language Models (LLMs)\u201d conducted during July\u2013October 2025. This course provided a strong theoretical and practical foundation in Large ",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-038_LI-POST-038_Intro_to_LLMs_-_NPTEL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-038_LI-POST-038_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-038_LI-POST-038_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -139,7 +139,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-12-14T17:11:14.280Z",
     "description": "Thrilled to Announce My Latest Achievement! I'm excited to share that I have successfully completed the Complete Git and GitHub Course and earned my certificate of completion on December 14th, 2024! This incredible journey not only enhanced my technical expertise but also deepene",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-042_LI-POST-042_Complete_Git__GitHub_-_Geekster.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-042_LI-POST-042_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-042_LI-POST-042_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -152,7 +152,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-12-05T13:34:27.883Z",
     "description": "Excited to Share My Achievement! I am thrilled to announce that I have successfully completed the 30 Days MasterClass in Artificial Intelligence conducted by NoviTech R&D Private Limited from October 7th to November 18th, 2024. This masterclass has been an incredible journey of l",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-046_LI-POST-046_AI_30_DAYS_MasterClass_Certification_-_NoviTech.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-046_LI-POST-046_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-046_LI-POST-046_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -167,7 +167,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-09-05T19:02:23.272Z",
     "description": "Excited to share that I\u2019ve completed a 90-minute workshop on Robotic Process Automation (UI Path) at WiseLearnz Pvt Ltd! This certification deepens my expertise in automating processes to drive efficiency and innovation. Ready to leverage these skills in future projects and oppor",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-047_LI-POST-047_Robotic_Process_Automation_Workshop_Certificate.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-047_LI-POST-047_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-047_LI-POST-047_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -180,7 +180,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2025-11-05T17:25:52.754Z",
     "description": "I\u2019m glad to share that I\u2019ve successfully participated in a Free Webinar on Amazon Web Services (AWS) organized by SPARCSTONZ IT Academy (Learning & Development). This session provided valuable insights into AWS Cloud Computing, covering its core services, foundational concepts, a",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-049_LI-POST-049_AWS-WEBINAR.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-049_LI-POST-049_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-049_LI-POST-049_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -193,7 +193,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-10-13T14:40:15.484Z",
     "description": "\"Just powered through an intense 2-hour Bootcamp on GitHub for Developers: Managing Code and Projects with Ease conducted by NoviTech R&D on October 6th, 2024! Learning to streamline code and collaborate seamlessly was a game-changer. Excited to level up my development workflow a",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-052_LI-POST-052_GitHub_Initiative.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-052_LI-POST-052_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-052_LI-POST-052_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -208,7 +208,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-12-07T17:35:38.926Z",
     "description": "Excited to Announce My Latest Achievement! I am proud to share that I have successfully completed the AWS APAC's Solutions Architecture Virtual Experience Program on Forage. This comprehensive simulation provided me with an invaluable opportunity to gain hands-on experience in de",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-058_LI-POST-058_AWS_-_SOLUTION_ARCHITECT_-_JOB_SIMULATION_-_FORAGE.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-058_LI-POST-058_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-058_LI-POST-058_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -221,7 +221,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-28T18:10:53.618Z",
     "description": "\"Pleasure to share that I\u2019ve completed a 3-hour deep dive bootcamp on Full Stack Development, focusing on the MERN stack (MongoDB, Express, React, Node.js) and extending to AngularJS and Vue.js, hosted by Novitech. This interactive session was a fantastic opportunity to enhance m",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-061_LI-POST-061_Full_Stack_Development_Bootcamp_Certificate_-_Novi.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-061_LI-POST-061_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-061_LI-POST-061_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -236,7 +236,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-29T18:27:11.084Z",
     "description": "\"Proud to have received a Certificate of Appreciation from Devtown in recognition of my continuous support in helping to grow their community. It's an honor to contribute to such a dynamic and forward-thinking organization. Looking forward to more opportunities to collaborate and",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-063_LI-POST-063_Doc_From_DevTown.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-063_LI-POST-063_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-063_LI-POST-063_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "DevTown"
@@ -251,7 +251,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-09-05T00:09:27.123Z",
     "description": "\"Excited to have successfully completed a 2-hour intensive Bootcamp in Cyber Security on September 1st, 2024, conducted by NoviTech R&D Private Limited. Delving into the latest trends and defenses in the cybersecurity landscape was both thrilling and eye-opening. This experience ",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-064_LI-POST-064_CyberSecurity_Bootcamp_Certificate_-_Novitech.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-064_LI-POST-064_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-064_LI-POST-064_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -281,7 +281,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2025-11-05T17:30:03.799Z",
     "description": "I\u2019m proud to share that I\u2019ve successfully completed the NPTEL Online Certification Course on Python for Data Science, funded by the Ministry of Education (MoE), Government of India, and conducted by the Indian Institute of Technology Madras (IITM). With a consolidated score of 82",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-066_LI-POST-066_NPTEL-Python_for_Data_Science.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-066_LI-POST-066_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-066_LI-POST-066_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "IIT Madras"
@@ -311,7 +311,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-11-22T13:27:41.795Z",
     "description": "\" Thrilled to have completed an insightful 1-hour webinar on Advanced Branching Strategies in GitHub, conducted by NoviTech R&D on November 17th, 2024! Exploring branching techniques to streamline development workflows was truly eye-opening. Ready to put these advanced GitHub str",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-068_LI-POST-068_GitHub_-_Novitech.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-068_LI-POST-068_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-068_LI-POST-068_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -341,7 +341,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-10-27T05:57:20.476Z",
     "description": "Just wrapped up an exhilarating 2-hour Bootcamp diving In To the Data-Driven World on October 6th, 2024, hosted by NoviTech R&D Private Limited! Immersed in powerful insights and techniques to navigate the vast world of data, I\u2019m all set to transform numbers into narratives. Read",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-072_LI-POST-072_In_to_data_driven_World_-_Bootcamp.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-072_LI-POST-072_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-072_LI-POST-072_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -356,7 +356,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-10-29T03:33:12.238Z",
     "description": "\"Just ignited my machine learning journey by completing a 2-hour Bootcamp on Stepwise Construction of a Machine Learning Model, hosted by NoviTech R&D on October 13th, 2024! Breaking down complex ML models step by step was an exhilarating experience, fueling my passion for data-d",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-073_LI-POST-073_ML_Model_Construction_Bootcamp.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-073_LI-POST-073_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-073_LI-POST-073_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -371,7 +371,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2026-01-05T09:10:32.326Z",
     "description": "Achievement Unlocked | NPTEL Certification I\u2019m glad to share that I have successfully completed the 12-week NPTEL course on \u201cIntroduction to Machine Learning\u201d, conducted during July\u2013October 2025. This course offered a comprehensive foundation in Machine Learning, covering essenti",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-074_LI-POST-074_Intro_to_ML_-_NPTEL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-074_LI-POST-074_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-074_LI-POST-074_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -384,7 +384,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-10-05T15:41:58.019Z",
     "description": "\"Thrilled to have participated in the \u2018Study Abroad for Work Abroad\u2019 webinar, hosted by the Institution Innovation Council at Mohamed Sathak Engineering College, Kilakarai on 05-10-24. It was a power-packed session full of insights into global opportunities and career pathways. R",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-079_LI-POST-079_Study_Abroad_Work_Abroad-Mohamed_sathak_Council_Br.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-079_LI-POST-079_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-079_LI-POST-079_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Mohamed Sathak Engineering College"
@@ -399,7 +399,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-09-21T15:03:14.772Z",
     "description": "\"Excited to have completed a 1-hour intensive bootcamp in Ethical Hacking on September 15th, 2024, conducted by NoviTech R&D Private Limited. This bootcamp was a thrilling deep dive into the world of cybersecurity, exploring vulnerabilities and securing systems against potential ",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-088_LI-POST-088_Ethical_Hacking_-_bootcamp.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-088_LI-POST-088_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-088_LI-POST-088_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -414,7 +414,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-11-18T17:38:19.267Z",
     "description": "Excited to share my recent accomplishment of earning a certificate in HTML AN INTRODUCTION BY SIMPLILEARN. The learning journey was transformative, and I feel more equipped to take on new challenges. I am grateful for the opportunity to expand my knowledge and skills. Looking for",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-089_LI-POST-089_HTML_-_SIMPLILEARN.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-089_LI-POST-089_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-089_LI-POST-089_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Simplilearn"
@@ -429,7 +429,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-10-08T12:27:40.754Z",
     "description": "\"Just conquered the 30 Days Machine Learning MasterClass from August 8th to September 16th, 2024, with NoviTech R&D Private Limited! From cracking complex algorithms to wrangling data like a pro, this was an intense ride through the world of ML. Armed with new skills and ready to",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-093_LI-POST-093_30Days_Masterclass_in_ML_Certification_-_NOVITECH.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-093_LI-POST-093_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-093_LI-POST-093_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -444,7 +444,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-09-02T15:57:48.888Z",
     "description": "\"Just completed a whirlwind 3-hour bootcamp on Artificial Intelligence, hosted by Novitech! Diving deep into the world of AI was both exhilarating and enlightening, offering fresh perspectives and innovative insights. Ready to take these new skills and ideas to the next level and",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-094_LI-POST-094_AI_Bootcamp_Certificate_by_Novitech.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-094_LI-POST-094_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-094_LI-POST-094_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -459,7 +459,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-27T18:45:25.916Z",
     "description": "\"Thrilled to have embarked on a coding adventure with Coursera! I just completed the guided project 'Create Your First Python Program' from UST. This project was a great way to dive deep into Python programming and sharpen my coding skills. Earning this certificate has fueled my ",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-096_LI-POST-096_Create_Your_First_PythonProgram_Certificate-USTCou.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-096_LI-POST-096_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-096_LI-POST-096_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": []
   },
@@ -472,7 +472,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-11-16T13:14:40.830Z",
     "description": "\"Guess what? I just completed the R Test organized by Mohamed Sathak Engineering College, with course material from the awesome Spoken Tutorial Project by IIT Bombay! Passed the online exam (remotely proctored by IIT Bombay) under the watchful eye of N. Hema Kumari. Big thanks to",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-097_LI-POST-097_R_at_MSEC_SPOKEN_TUTORIAL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-097_LI-POST-097_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-097_LI-POST-097_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Mohamed Sathak Engineering College",
@@ -488,7 +488,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2025-11-13T16:22:08.909Z",
     "description": "I am delighted to announce that I have successfully completed the NPTEL Online Certification in Learning Analytics Tools, funded by the Ministry of Education (MoE), Government of India, and offered through IIT Bombay under the SWAYAM initiative. This 12-week program (Jul\u2013Oct 2025",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-099_LI-POST-099_Learning_Analytics_Tools_-_NPTEL.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-099_LI-POST-099_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-099_LI-POST-099_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "IIT Bombay"
@@ -503,7 +503,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-12-09T18:09:54.105Z",
     "description": "Excited to Share My Latest Achievement! I am thrilled to announce that I have successfully completed a Power BI Workshop on the Office Master Platform, led by none other than Mr. Aditya Goenka, Co-founder of Office Master and an esteemed alumnus of IIT Kharagpur. This immersive w",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-100_LI-POST-100_PowerBI_-_Workshop_-_OfficeMaster.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-100_LI-POST-100_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-100_LI-POST-100_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "IIT Kharagpur",
@@ -519,7 +519,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-18T17:51:37.669Z",
     "description": "\"I am pleased to share that I have successfully completed the Python Essentials course through Cisco. This certification has deepened my understanding of Python programming, equipping me with the foundational skills necessary for advanced applications in AI and Data Science. I am",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-103_LI-POST-103_Python_Essentials_Certificate_-_Cisco.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-103_LI-POST-103_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-103_LI-POST-103_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Cisco"
@@ -547,7 +547,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-24T16:16:58.834Z",
     "description": "\"Excited to share that I recently completed a 2-hour Artificial Intelligence bootcamp on August 18, 2024, hosted by Novitech R&D Private Limited. This intensive session provided valuable insights into the latest AI technologies and trends, enhancing my understanding and skills in",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-106_LI-POST-106_AI_Bootcamp_Certificate_-_Novitech_RD_Aug_2024.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-106_LI-POST-106_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-106_LI-POST-106_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "NoviTech"
@@ -562,7 +562,7 @@ export const CERTIFIDES: CertificateItem[] = [
     "date": "2024-08-20T00:06:38.236Z",
     "description": "I\u2019m happy to share that I\u2019ve obtained a new certification: Document Control: From Principles to Practice from Alison! \"I've completed the 'Document Control: From Principles to Practice' course from Alison and have attached my learner verification to validate this achievement. Thi",
     "pdfUrl": "/portfolio_assets/certificates/LI-POST-108_LI-POST-108_Document_Control_-_Learner_Verification_-_Alison.pdf",
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-108_LI-POST-108_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-108_LI-POST-108_doc_cover_0.jpg",
     "hasPdf": true,
     "keyEntities": [
       "Alison"
@@ -600,12 +600,12 @@ export const CERTIFIDES: CertificateItem[] = [
     "id": "CONT-062",
     "postId": "LI-POST-062",
     "title": "A Major Milestone in My Data Science Journey | NPTEL Domain Certification",
-    "issuer": "Professional Certification",
-    "score": null,
+    "issuer": "SWAYAM-NPTEL (IIT Madras, IIT Roorkee, IISc, IIT Bombay, IIT Delhi)",
+    "score": "Domain Certified (415 Total Marks | Discipline Star & Believer)",
     "date": "2026-08-27T08:58:27.620Z",
-    "description": "A Major Milestone in My Data Science Journey | NPTEL Domain Certification I am extremely proud and delighted to share a significant milestone in my learning journey: I have successfully completed the SWAYAM-NPTEL Domain Certification in Data Science (Computer Science). This achie",
+    "description": "Successfully completed the SWAYAM-NPTEL Domain Certification in Data Science (Computer Science), completing 3 Core Courses and 3 Elective Courses across IIT Madras, IIT Roorkee, IISc Bangalore, IIT Bombay, and IIT Delhi. Recognised as NPTEL Discipline Star in Data Science and NPTEL Believer.",
     "pdfUrl": null,
-    "thumbnailUrl": "/portfolio_assets/thumbnails/LI-POST-062_LI-POST-062_author_avatar.jpg",
+    "thumbnailUrl": "/portfolio_assets/gallery/LI-POST-062_LI-POST-062_img_01.jpg",
     "hasPdf": false,
     "keyEntities": [
       "IIT Madras",

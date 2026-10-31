@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import DataScienceJourney from "@/components/DataScienceJourney";
 import Footer from "@/components/Footer";
 
 export default function AboutPage() {
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <div className="pt-20">
         <About />
         <Skills />
+        <DataScienceJourney />
       </div>
       <Footer />
     </main>

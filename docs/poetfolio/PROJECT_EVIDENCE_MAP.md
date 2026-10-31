@@ -19,10 +19,10 @@ Every claim, tech stack item, and metric presented in Poetfolio is mapped direct
                       └───► Team SPARKZ Architecture: Computer Vision Kinematics
 
 [Credit Scoring ML] ──────► TechQuanta Repo: F:\organised\project-ppts,word\data-science\
-                      └───► GitHub: https://github.com/vijayaregunath-t/Credit-Score-model-Task1
+                      └───► GitHub: https://github.com/mrvruser/Credit-Score-model-Task1
 
 [Flipkart Product EDA] ───► TechQuanta Repo: F:\organised\project-ppts,word\data-science\
-                      └───► GitHub: https://github.com/vijayaregunath-t/flipkart-product-analysis
+                      └───► GitHub: https://github.com/mrvruser/flipkart-product-analysis
 
 [Agent InAI] ─────────────► MSEC-IIF Pitchdeck: F:\organised\project-ppts,word\Agent Inai...
                       └───► Incubation Proposal: C:\Users\Asus\OneDrive\Desktop\AGENT InAI...

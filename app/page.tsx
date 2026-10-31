@@ -7,6 +7,7 @@ import Particles from "@/components/Particles";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import DataScienceJourney from "@/components/DataScienceJourney";
 import Projects from "@/components/Projects";
 import LearningOdyssey from "@/components/LearningOdyssey";
 import GiftMeABook from "@/components/GiftMeABook";
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* SKILLS & TECHNICAL TOOLKIT */}
       <Skills />
+
+      {/* THE DATA SCIENCE LEARNING JOURNEY (SWAYAM-NPTEL & IIT/IISc ACCREDITED) */}
+      <DataScienceJourney />
 
       {/* CURATED CREATIONS / PROJECT SHOWCASE & ACCESS REQUEST */}
       <Projects />

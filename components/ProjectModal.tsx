@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Project } from "@/data/projects";
 import {
@@ -61,7 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           exit={{ opacity: 0, scale: 0.94, y: 15 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 border shadow-2xl transition-colors duration-300"
+          className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 border shadow-2xl transition-colors duration-300"
           style={{
             backgroundColor: "var(--glass-card-bg)",
             borderColor: "var(--border-accent)",
@@ -73,7 +74,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-2xl border border-theme hover:border-accent-theme hover:scale-105 active:scale-95 transition-all text-secondary hover:text-primary bg-surface-theme/70"
+            className="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-2xl border border-theme hover:border-accent-theme hover:scale-105 active:scale-95 transition-all text-secondary hover:text-primary bg-surface-theme/70 z-10"
             aria-label="Close project modal"
           >
             <CloseIcon size={18} />
@@ -98,6 +99,27 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {project.tagline}
           </p>
 
+          {/* Project Media Visual Presentation */}
+          {project.image && (
+            <div className="mb-6 space-y-2">
+              <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-slate-900 border border-theme">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="800px"
+                  className="object-cover"
+                />
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[10px] font-bold text-accent-theme border border-white/10 uppercase tracking-wider">
+                  {project.imageType}
+                </div>
+              </div>
+              <p className="text-xs text-secondary italic">
+                {project.imageCaption}
+              </p>
+            </div>
+          )}
+
           {/* Full Details */}
           <div className="space-y-4 text-sm sm:text-base leading-relaxed text-secondary mb-6">
             <p>{project.fullDetails}</p>
@@ -107,7 +129,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {project.metrics && (
             <div className="p-4 rounded-2xl mb-6 border border-theme bg-surface-theme/60">
               <span className="text-xs font-semibold uppercase tracking-wider block mb-1 text-accent-theme">
-                Verified Milestone & Impact
+                Verified Milestone &amp; Impact
               </span>
               <p className="text-sm font-medium">
                 {project.metrics}
@@ -118,7 +140,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Tech Stack Pills */}
           <div className="mb-8">
             <span className="text-xs uppercase tracking-wider block mb-3 font-semibold text-secondary">
-              Technologies & Frameworks
+              Technologies &amp; Frameworks
             </span>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t, i) => (

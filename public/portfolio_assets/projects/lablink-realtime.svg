@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="220" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="140" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">REAL-TIME WEBSOCKETS</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">LabLink — Ephemeral Classroom Collaboration</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">Zero-Auth Broadcast • Socket.io Rooms • Synchronous Fenced Code Sharing</text>
+
+  <g transform="translate(50, 150)">
+    <rect width="320" height="230" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="25" y="35" fill="#00F5D4" font-size="13" font-weight="700">Broadcast Terminal</text>
+    <rect x="25" y="55" width="270" height="150" rx="8" fill="#090c13"/>
+    <text x="40" y="80" fill="#00F5D4" font-family="monospace" font-size="11">&gt; room: lab-cs302</text>
+    <text x="40" y="105" fill="#F0F4F8" font-family="monospace" font-size="11"># Broadcasting python snippet...</text>
+    <text x="40" y="130" fill="#8B9BB0" font-family="monospace" font-size="11">def quicksort(arr): ...</text>
+    <text x="40" y="160" fill="#00F5D4" font-family="monospace" font-size="11">&gt; 42 connected peers synced</text>
+  </g>
+
+  <path d="M370 265h60" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(430, 150)">
+    <rect width="320" height="230" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="25" y="35" fill="#00F5D4" font-size="13" font-weight="700">Socket.io Ephemeral Relay</text>
+    <rect x="25" y="55" width="270" height="150" rx="8" fill="#151b29"/>
+    <text x="40" y="85" fill="#F0F4F8" font-size="11">✓ In-Memory Room Broker</text>
+    <text x="40" y="115" fill="#F0F4F8" font-size="11">✓ Zero Database Persistence (Privacy)</text>
+    <text x="40" y="145" fill="#F0F4F8" font-size="11">✓ Low Latency (&lt;25ms local LAN)</text>
+    <text x="40" y="175" fill="#00F5D4" font-size="11">✓ Auto-Expiring Snippet Buffer</text>
+  </g>
+</svg>

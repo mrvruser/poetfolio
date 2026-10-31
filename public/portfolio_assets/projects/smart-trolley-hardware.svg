@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="200" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="130" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">EMBEDDED HARDWARE IOT</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">Autonomous Follower &amp; RFID Cart</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">Arduino UNO • ESP32 • Ultrasonic Follower Logic • Instant LCD Billing</text>
+
+  <g transform="translate(60, 150)">
+    <rect width="200" height="220" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="100" y="35" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">Sensor Cluster</text>
+    <text x="100" y="70" fill="#F0F4F8" font-size="11" text-anchor="middle">Ultrasonic Transceivers</text>
+    <text x="100" y="95" fill="#8B9BB0" font-size="10" text-anchor="middle">Distance measurement (30cm)</text>
+    <text x="100" y="125" fill="#F0F4F8" font-size="11" text-anchor="middle">IR Directional Tracking</text>
+    <text x="100" y="150" fill="#8B9BB0" font-size="10" text-anchor="middle">Human-follower servo locks</text>
+  </g>
+  <path d="M260 260h70" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(330, 135)">
+    <rect width="200" height="240" rx="16" fill="#151b29" stroke="#00F5D4" stroke-width="2"/>
+    <text x="100" y="35" fill="#00F5D4" font-size="14" font-weight="800" text-anchor="middle">Processing Core</text>
+    <text x="100" y="75" fill="#F0F4F8" font-size="11" text-anchor="middle">Arduino UNO + ESP32</text>
+    <text x="100" y="105" fill="#F0F4F8" font-size="11" text-anchor="middle">Motor Driver (L298N)</text>
+    <text x="100" y="135" fill="#F0F4F8" font-size="11" text-anchor="middle">PWM Speed Regulation</text>
+    <text x="100" y="180" fill="#00F5D4" font-size="11" font-weight="600" text-anchor="middle">RFID RC522 Reader</text>
+    <text x="100" y="200" fill="#8B9BB0" font-size="10" text-anchor="middle">Automated product scanner</text>
+  </g>
+  <path d="M530 260h70" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(600, 150)">
+    <rect width="160" height="220" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="80" y="35" fill="#00F5D4" font-size="13" font-weight="700" text-anchor="middle">Display Output</text>
+    <rect x="20" y="60" width="120" height="60" rx="6" fill="#00F5D4" fill-opacity="0.1" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <text x="80" y="90" fill="#00F5D4" font-family="monospace" font-size="10" text-anchor="middle">TOTAL: ₹1,420</text>
+    <text x="80" y="105" fill="#8B9BB0" font-family="monospace" font-size="9" text-anchor="middle">ITEMS: 4</text>
+    <text x="80" y="155" fill="#F0F4F8" font-size="11" text-anchor="middle">16x2 I2C LCD</text>
+  </g>
+</svg>

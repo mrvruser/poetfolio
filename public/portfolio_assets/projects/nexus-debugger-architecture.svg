@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="220" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="140" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">CODE AUDIT &amp; DEBUGGING</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">Nexus Collaborative Suite — Architecture Audit</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">Enterprise MERN Stack • Redux Toolkit State Immutability • JWT Concurrency Hardening</text>
+
+  <g transform="translate(60, 150)">
+    <rect width="310" height="230" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="25" y="35" fill="#00F5D4" font-size="13" font-weight="700">Identified Vulnerabilities</text>
+    <rect x="25" y="55" width="260" height="45" rx="8" fill="#1f1818" stroke="#ff4d4d" stroke-opacity="0.4"/>
+    <text x="40" y="82" fill="#ff7070" font-size="11">Direct Redux State Mutation bug</text>
+    <rect x="25" y="115" width="260" height="45" rx="8" fill="#1f1818" stroke="#ff4d4d" stroke-opacity="0.4"/>
+    <text x="40" y="142" fill="#ff7070" font-size="11">Asynchronous Token Expiration Race</text>
+  </g>
+
+  <g transform="translate(430, 150)">
+    <rect width="310" height="230" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="25" y="35" fill="#00F5D4" font-size="13" font-weight="700">Hardened Production Fixes</text>
+    <rect x="25" y="55" width="260" height="45" rx="8" fill="#152621" stroke="#00F5D4" stroke-opacity="0.5"/>
+    <text x="40" y="82" fill="#00F5D4" font-size="11">✓ createSlice Immer Immutable Pattern</text>
+    <rect x="25" y="115" width="260" height="45" rx="8" fill="#152621" stroke="#00F5D4" stroke-opacity="0.5"/>
+    <text x="40" y="142" fill="#00F5D4" font-size="11">✓ Axios Refresh Interceptor Mutex</text>
+  </g>
+</svg>

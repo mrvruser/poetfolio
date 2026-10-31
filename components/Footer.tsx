@@ -26,7 +26,7 @@ export default function Footer() {
         {/* Right Socials & Back to Top */}
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/vijayaregunath-t"
+            href="https://github.com/mrvruser"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent-theme transition-colors inline-flex items-center gap-1.5"

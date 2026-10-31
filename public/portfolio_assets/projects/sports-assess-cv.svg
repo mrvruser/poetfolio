@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" style="background:#090c13; font-family:system-ui, sans-serif;">
+  <rect width="800" height="450" fill="#08090C"/>
+  <rect x="30" y="24" width="220" height="26" rx="13" fill="#00F5D4" fill-opacity="0.15" stroke="#00F5D4" stroke-opacity="0.3"/>
+  <text x="140" y="41" fill="#00F5D4" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">COMPUTER VISION PIPELINE</text>
+  <text x="30" y="80" fill="#F0F4F8" font-size="22" font-weight="800">Sports Assess — Motion Kinematics</text>
+  <text x="30" y="102" fill="#8B9BB0" font-size="13">SIH 2025 College Finalist • MediaPipe 33-Keypoint Extraction • Agility Benchmarking</text>
+
+  <!-- Flow Boxes -->
+  <g transform="translate(40, 150)">
+    <rect width="150" height="200" rx="16" fill="#131622" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="75" cy="50" r="24" fill="#00F5D4" fill-opacity="0.1"/>
+    <text x="75" y="55" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">STEP 1</text>
+    <text x="75" y="100" fill="#F0F4F8" font-size="13" font-weight="700" text-anchor="middle">Mobile Ingest</text>
+    <text x="75" y="125" fill="#8B9BB0" font-size="10" text-anchor="middle">Self-recorded video</text>
+    <text x="75" y="145" fill="#8B9BB0" font-size="10" text-anchor="middle">Sprint / Vertical Jump</text>
+    <text x="75" y="165" fill="#8B9BB0" font-size="10" text-anchor="middle">Grassroots trials</text>
+  </g>
+
+  <path d="M190 250h40" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(230, 150)">
+    <rect width="160" height="200" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.4"/>
+    <circle cx="80" cy="50" r="24" fill="#00F5D4" fill-opacity="0.15"/>
+    <text x="80" y="55" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">STEP 2</text>
+    <text x="80" y="100" fill="#F0F4F8" font-size="13" font-weight="700" text-anchor="middle">MediaPipe Pose</text>
+    <text x="80" y="125" fill="#8B9BB0" font-size="10" text-anchor="middle">33 3D Joint Keypoints</text>
+    <text x="80" y="145" fill="#8B9BB0" font-size="10" text-anchor="middle">Angular velocity calculation</text>
+    <text x="80" y="165" fill="#8B9BB0" font-size="10" text-anchor="middle">Drift suppression</text>
+  </g>
+
+  <path d="M390 250h40" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(430, 150)">
+    <rect width="160" height="200" rx="16" fill="#131622" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <circle cx="80" cy="50" r="24" fill="#00F5D4" fill-opacity="0.2"/>
+    <text x="80" y="55" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">STEP 3</text>
+    <text x="80" y="100" fill="#F0F4F8" font-size="13" font-weight="700" text-anchor="middle">Kinematic Model</text>
+    <text x="80" y="125" fill="#8B9BB0" font-size="10" text-anchor="middle">Flight-time physics equation</text>
+    <text x="80" y="145" fill="#8B9BB0" font-size="10" text-anchor="middle">Stride frequency analysis</text>
+    <text x="80" y="165" fill="#8B9BB0" font-size="10" text-anchor="middle">Rep counter validation</text>
+  </g>
+
+  <path d="M590 250h40" stroke="#00F5D4" stroke-width="2"/>
+
+  <g transform="translate(630, 150)">
+    <rect width="140" height="200" rx="16" fill="#131622" stroke="#ffffff" stroke-opacity="0.1"/>
+    <circle cx="70" cy="50" r="24" fill="#00F5D4" fill-opacity="0.25"/>
+    <text x="70" y="55" fill="#00F5D4" font-size="12" font-weight="700" text-anchor="middle">OUTPUT</text>
+    <text x="70" y="100" fill="#F0F4F8" font-size="13" font-weight="700" text-anchor="middle">Scout Report</text>
+    <text x="70" y="125" fill="#00F5D4" font-size="11" font-weight="600" text-anchor="middle">National Index Score</text>
+    <text x="70" y="150" fill="#8B9BB0" font-size="10" text-anchor="middle">Certified verification</text>
+  </g>
+</svg>
