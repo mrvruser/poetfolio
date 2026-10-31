@@ -45,6 +45,18 @@ export default function Footer() {
             <span>LinkedIn</span>
           </a>
           <span className="text-tertiary">•</span>
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.dispatchEvent(new CustomEvent("poetfolio:replay-intro"));
+              }
+            }}
+            className="hover:text-accent-theme transition-colors font-semibold"
+          >
+            Replay Intro
+          </button>
+          <span className="text-tertiary">•</span>
           <a
             href="#"
             className="hover:text-accent-theme transition-colors font-bold inline-flex items-center gap-1"

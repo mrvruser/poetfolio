@@ -7,6 +7,12 @@ import { MenuIcon, CloseIcon } from "@/components/Icons";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const triggerReplayIntro = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("poetfolio:replay-intro"));
+    }
+  };
+
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -45,6 +51,15 @@ export default function Navbar() {
 
         {/* Right Side Controls: Book ↔ Brain Theme Toggle & Mobile Menu Trigger */}
         <div className="flex items-center gap-3 sm:gap-4">
+          <button
+            type="button"
+            onClick={triggerReplayIntro}
+            className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-theme bg-card-theme/60 hover:border-accent-theme hover:text-accent-theme text-[11px] font-semibold text-secondary transition-all"
+            title="Replay cinematic introduction sequence"
+          >
+            <span>Replay Intro</span>
+          </button>
+
           <BookToggle />
 
           {/* Mobile Menu Button */}
