@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpIcon, GitHubIcon, LinkedInIcon } from "@/components/Icons";
+import { ArrowUpIcon, GitHubIcon, LinkedInIcon, WhatsAppIcon } from "@/components/Icons";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,6 +43,16 @@ export default function Footer() {
           >
             <LinkedInIcon size={14} />
             <span>LinkedIn</span>
+          </a>
+          <span className="text-tertiary">•</span>
+          <a
+            href="https://wa.me/918300398072"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent-theme transition-colors inline-flex items-center gap-1.5"
+          >
+            <WhatsAppIcon size={14} />
+            <span>WhatsApp</span>
           </a>
           <span className="text-tertiary">•</span>
           <button

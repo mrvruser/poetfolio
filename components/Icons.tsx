@@ -484,3 +484,37 @@ export function SparklesIcon({ size = 18, strokeWidth = 1.75, className = "", ..
     </svg>
   );
 }
+
+/** Galaxy Dashboard Mode Icon */
+export function GalaxyDashboardIcon({ size = 18, strokeWidth = 1.75, className = "", ...props }: IconProps) {
+  return (
+    <svg width={size} height={size} {...defaultProps} strokeWidth={strokeWidth} className={className} {...props}>
+      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="14" width="7" height="7" rx="1.5" />
+      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+    </svg>
+  );
+}
+
+/** Classic Sidebar Mode Icon */
+export function ClassicSidebarIcon({ size = 18, strokeWidth = 1.75, className = "", ...props }: IconProps) {
+  return (
+    <svg width={size} height={size} {...defaultProps} strokeWidth={strokeWidth} className={className} {...props}>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <line x1="9" y1="3" x2="9" y2="21" />
+      <path d="M14 9l2 3-2 3" />
+    </svg>
+  );
+}
+
+/** Replay Cinematic Intro Icon */
+export function ReplayIcon({ size = 18, strokeWidth = 1.75, className = "", ...props }: IconProps) {
+  return (
+    <svg width={size} height={size} {...defaultProps} strokeWidth={strokeWidth} className={className} {...props}>
+      <polyline points="1 4 1 10 7 10" />
+      <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+      <polygon points="11,10 15,12 11,14" fill="currentColor" />
+    </svg>
+  );
+}

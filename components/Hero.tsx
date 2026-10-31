@@ -1,18 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 import ResumeModal from "@/components/ResumeModal";
 import {
   ArrowDownIcon,
-  ArrowRightIcon,
   DocumentResumeIcon,
   CreationsIcon,
   ContactIcon,
   LinkedInIcon,
   GitHubIcon,
-  XTwitterIcon,
+  WhatsAppIcon,
   EmailIcon,
   SparklesIcon,
 } from "@/components/Icons";
@@ -20,6 +19,65 @@ import {
 export default function Hero() {
   const [imgError, setImgError] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  // =========================================================================
+  // 1. CURSOR-RESPONSIVE AMBIENT LIGHT FIELD (Spring Interpolation)
+  // =========================================================================
+  const heroMouseX = useMotionValue(-1000);
+  const heroMouseY = useMotionValue(-1000);
+
+  const springConfig = { stiffness: 150, damping: 25 };
+  const glowX = useSpring(heroMouseX, springConfig);
+  const glowY = useSpring(heroMouseY, springConfig);
+
+  const handleHeroMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    heroMouseX.set(e.clientX - rect.left);
+    heroMouseY.set(e.clientY - rect.top);
+  };
+
+  const handleHeroMouseLeave = () => {
+    heroMouseX.set(-1000);
+    heroMouseY.set(-1000);
+  };
+
+  // =========================================================================
+  // 2. 3D TILT & GLARE EFFECT ON PORTRAIT CARD
+  // =========================================================================
+  const portraitRef = useRef<HTMLDivElement>(null);
+  const cardRotateX = useMotionValue(0);
+  const cardRotateY = useMotionValue(0);
+  const glareOpacity = useMotionValue(0);
+  const glareX = useMotionValue(50);
+  const glareY = useMotionValue(50);
+
+  const springCardX = useSpring(cardRotateX, { stiffness: 200, damping: 20 });
+  const springCardY = useSpring(cardRotateY, { stiffness: 200, damping: 20 });
+  const springGlareOpacity = useSpring(glareOpacity, { stiffness: 200, damping: 20 });
+
+  const handlePortraitMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!portraitRef.current) return;
+    const rect = portraitRef.current.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const rotateYVal = ((mouseX - width / 2) / (width / 2)) * 8; // ±8 deg
+    const rotateXVal = -((mouseY - height / 2) / (height / 2)) * 6; // ±6 deg
+
+    cardRotateX.set(rotateXVal);
+    cardRotateY.set(rotateYVal);
+    glareOpacity.set(0.35);
+    glareX.set((mouseX / width) * 100);
+    glareY.set((mouseY / height) * 100);
+  };
+
+  const handlePortraitMouseLeave = () => {
+    cardRotateX.set(0);
+    cardRotateY.set(0);
+    glareOpacity.set(0);
+  };
 
   const verifiedMetrics = [
     { value: "9.76", label: "Current SGPA", sub: "10.0 Scale" },
@@ -30,35 +88,49 @@ export default function Hero() {
 
   const socialLinks = [
     {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/mr-vijayaregunath-t-77b427316",
-      icon: <LinkedInIcon size={16} />,
-    },
-    {
       name: "GitHub",
       href: "https://github.com/mrvruser",
-      icon: <GitHubIcon size={16} />,
+      icon: <GitHubIcon size={17} />,
     },
     {
-      name: "X (Twitter)",
-      href: "https://x.com/RhConqueror?t=qszqmX_cMg6LmDDkZA&s=08",
-      icon: <XTwitterIcon size={16} />,
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/mr-vijayaregunath-t-77b427316",
+      icon: <LinkedInIcon size={17} />,
+    },
+    {
+      name: "WhatsApp",
+      href: "https://wa.me/918300398072",
+      icon: <WhatsAppIcon size={17} />,
     },
     {
       name: "Email",
       href: "mailto:vijayaregunath005@gmail.com",
-      icon: <EmailIcon size={16} />,
+      icon: <EmailIcon size={17} />,
     },
   ];
 
   return (
     <section
       id="hero"
+      onMouseMove={handleHeroMouseMove}
+      onMouseLeave={handleHeroMouseLeave}
       className="relative min-h-[94vh] flex flex-col justify-center pt-28 pb-16 px-5 sm:px-8 lg:px-12 xl:px-16 overflow-hidden"
     >
-      {/* Ambient background lighting gradient */}
+      {/* Static Base Ambient Gradients */}
       <div className="absolute inset-0 pointer-events-none hero-dark-gradient dark:block hidden" />
       <div className="absolute inset-0 pointer-events-none hero-literary-gradient dark:hidden block" />
+
+      {/* Dynamic Cursor-Responsive Ambient Glow Field (Spring-interpolated) */}
+      <motion.div
+        className="absolute w-[560px] h-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none blur-[130px] opacity-35 dark:opacity-40 transition-opacity duration-300 hidden md:block z-0"
+        style={{
+          left: glowX,
+          top: glowY,
+          background:
+            "radial-gradient(circle, var(--accent-glow) 0%, rgba(139, 92, 246, 0.12) 50%, transparent 75%)",
+        }}
+        aria-hidden="true"
+      />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-14 xl:gap-20 my-auto">
         
@@ -72,7 +144,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-theme bg-surface-theme/80 backdrop-blur-md shadow-sm"
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-theme bg-surface-theme/80 backdrop-blur-md shadow-xs"
           >
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-theme opacity-75" />
@@ -90,7 +162,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-2"
           >
-            <h1 className="text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-extrabold font-serif-title tracking-tight leading-[1.08]">
+            <h1 className="text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-extrabold font-serif-title tracking-tight leading-[1.08] select-none">
               VIJAYAREGUNATH <span className="text-accent-theme">T</span>
             </h1>
             <p className="text-lg sm:text-2xl font-serif-title italic text-secondary font-medium tracking-normal">
@@ -118,7 +190,7 @@ export default function Hero() {
             {verifiedMetrics.map((metric, idx) => (
               <div
                 key={idx}
-                className="p-3 sm:p-3.5 rounded-2xl border border-theme bg-card-theme/80 backdrop-blur-sm shadow-sm text-center lg:text-left transition-all duration-300 hover:border-accent-theme group"
+                className="p-3 sm:p-3.5 rounded-2xl border border-theme bg-card-theme/80 backdrop-blur-sm shadow-xs text-center lg:text-left transition-all duration-300 hover:border-accent-theme hover:scale-[1.02] group"
               >
                 <div className="flex items-baseline justify-center lg:justify-start gap-1">
                   <span className="text-2xl sm:text-3xl font-bold font-serif-title text-accent-theme leading-none">
@@ -182,15 +254,15 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* Verified Social Channels Strip */}
+          {/* Verified Circular Social Channels Strip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1 text-xs text-secondary"
+            className="flex items-center justify-center lg:justify-start gap-3 pt-2"
           >
-            <span className="text-[11px] uppercase tracking-wider font-semibold text-tertiary mr-1">
-              Connect:
+            <span className="text-[11px] uppercase tracking-wider font-semibold text-tertiary mr-1 hidden sm:inline">
+              Channels:
             </span>
             {socialLinks.map((s) => (
               <a
@@ -198,11 +270,13 @@ export default function Hero() {
                 href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-theme bg-surface-theme/60 hover:bg-surface-theme hover:text-accent-theme hover:border-accent-theme transition-all duration-200"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-theme bg-surface-theme/75 hover:bg-card-theme hover:text-accent-theme hover:border-accent-theme flex items-center justify-center transition-all duration-300 shadow-xs hover:shadow-[0_0_16px_var(--accent-glow)] group hover:scale-110"
                 aria-label={s.name}
+                title={s.name}
               >
-                {s.icon}
-                <span className="font-medium text-[11px]">{s.name}</span>
+                <span className="text-secondary group-hover:text-accent-theme transition-colors">
+                  {s.icon}
+                </span>
               </a>
             ))}
           </motion.div>
@@ -210,6 +284,7 @@ export default function Hero() {
 
         {/* ===================================================================
             RIGHT COLUMN: REFINED GLASS-LIKE PERSONAL PORTRAIT (40% on desktop)
+            With Interactive 3D Perspective Tilt & Dynamic Glare
             =================================================================== */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
@@ -217,8 +292,18 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="w-full sm:w-auto flex justify-center lg:justify-end"
         >
-          <div className="relative group select-none">
-            
+          <motion.div
+            ref={portraitRef}
+            onMouseMove={handlePortraitMouseMove}
+            onMouseLeave={handlePortraitMouseLeave}
+            style={{
+              perspective: 1000,
+              rotateX: springCardX,
+              rotateY: springCardY,
+              transformStyle: "preserve-3d",
+            }}
+            className="relative group select-none will-change-transform"
+          >
             {/* Ambient Halo Glow behind Frame */}
             <div
               className="absolute -inset-2 sm:-inset-6 rounded-[2.5rem] opacity-50 sm:opacity-65 blur-xl sm:blur-2xl transition-all duration-500 group-hover:opacity-90 pointer-events-none"
@@ -234,7 +319,7 @@ export default function Hero() {
 
             {/* Main Glassmorphic Photo Frame */}
             <div
-              className="relative w-[256px] h-[328px] sm:w-[320px] sm:h-[410px] md:w-[340px] md:h-[435px] lg:w-[360px] lg:h-[460px] xl:w-[380px] xl:h-[485px] rounded-[2rem] p-3 sm:p-3.5 border transition-all duration-500 shadow-2xl overflow-hidden"
+              className="relative w-[260px] h-[330px] sm:w-[320px] sm:h-[410px] md:w-[340px] md:h-[435px] lg:w-[360px] lg:h-[460px] xl:w-[380px] xl:h-[485px] rounded-[2rem] p-3 sm:p-3.5 border transition-all duration-500 shadow-2xl overflow-hidden"
               style={{
                 backgroundColor: "var(--glass-card-bg)",
                 borderColor: "var(--border-accent)",
@@ -243,6 +328,19 @@ export default function Hero() {
                 boxShadow: "var(--card-shadow)",
               }}
             >
+              {/* Dynamic Glare Reflection Overlay */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none rounded-[2rem] z-30 transition-opacity duration-200"
+                style={{
+                  opacity: springGlareOpacity,
+                  background: useTransform(
+                    [glareX, glareY],
+                    ([x, y]) =>
+                      `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.06) 40%, transparent 80%)`
+                  ),
+                }}
+              />
+
               {/* Inner Photographic Canvas */}
               <div className="relative w-full h-full rounded-[1.4rem] overflow-hidden bg-slate-900 border border-theme">
                 {!imgError ? (
@@ -302,7 +400,7 @@ export default function Hero() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
         </motion.div>
 
       </div>

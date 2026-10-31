@@ -200,6 +200,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   CLASSIC SIDEBAR LAYOUT ADJUSTMENT
+   ========================================================================== */
+@media (min-width: 1024px) {
+  html[data-nav-mode="sidebar"] body {
+    padding-left: var(--sidebar-offset, 270px);
+    transition: padding-left 0.3s ease;
+  }
+}
+
+/* ==========================================================================
    REDUCED MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {

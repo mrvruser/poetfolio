@@ -50,22 +50,22 @@ export default function CinematicOpening({
     };
   }, [handleFinish]);
 
-  // Stage timeline choreography
+  // Stage timeline choreography (Refined 3.5s total duration)
   useEffect(() => {
     if (!isVisible || reducedMotion) return;
 
-    // Stage 0 -> 1: Book emergence (600ms)
-    const t1 = setTimeout(() => setStage(1), 600);
-    // Stage 1 -> 2: Book transforms into Brain/Neural Network (1800ms)
-    const t2 = setTimeout(() => setStage(2), 1800);
-    // Stage 2 -> 3: Poetfolio Illuminated Wordmark (2800ms)
-    const t3 = setTimeout(() => setStage(3), 2800);
-    // Stage 3 -> 4: Exit dissolve (3800ms)
-    const t4 = setTimeout(() => setStage(4), 3800);
-    // Finish (4300ms)
-    const t5 = setTimeout(() => handleFinish(), 4300);
+    // Stage 0 -> 1: Book emergence (500ms)
+    const t1 = setTimeout(() => setStage(1), 500);
+    // Stage 1 -> 2: Book transforms into Brain/Neural Network (1500ms)
+    const t2 = setTimeout(() => setStage(2), 1500);
+    // Stage 2 -> 3: Poetfolio Illuminated Wordmark (2500ms)
+    const t3 = setTimeout(() => setStage(3), 2500);
+    // Stage 3 -> 4: Exit dissolve (3200ms)
+    const t4 = setTimeout(() => setStage(4), 3200);
+    // Finish (3600ms)
+    const t5 = setTimeout(() => handleFinish(), 3600);
 
-    // Keyboard listener for Escape key to skip immediately
+    // Silent keyboard listener for Escape and Space keys to skip immediately
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" || e.key === " ") {
         handleFinish();
@@ -138,18 +138,16 @@ export default function CinematicOpening({
           />
         </div>
 
-        {/* Skip Button */}
+        {/* Elegant Glass Skip Button (No visible ESC badge, keyboard shortcut remains active) */}
         <div className="absolute top-6 right-6 sm:top-8 sm:right-8 z-30">
           <button
             onClick={handleFinish}
             type="button"
-            className="group px-4 py-2 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-xs font-semibold tracking-wider text-white/80 hover:text-white hover:border-white/50 hover:bg-black/60 transition-all duration-300 flex items-center gap-2"
+            className="group px-4 py-2 rounded-full border border-white/20 bg-black/40 hover:bg-white/10 hover:border-white/40 backdrop-blur-xl text-xs font-semibold tracking-wider text-white/80 hover:text-white transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
             aria-label="Skip introduction"
           >
             <span>Skip Intro</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-white/60 group-hover:text-white font-mono">
-              ESC
-            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00F5D4] group-hover:scale-125 transition-transform" />
           </button>
         </div>
 
@@ -236,7 +234,7 @@ export default function CinematicOpening({
             <motion.div
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ duration: 3.8, ease: "linear" }}
+              transition={{ duration: 3.5, ease: "linear" }}
               className="h-full bg-gradient-to-r from-[#B8860B] via-[#00F5D4] to-[#B8860B]"
             />
           </div>

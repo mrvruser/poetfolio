@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import { NavigationProvider } from "@/components/NavigationContext";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable} dark`}>
       <body className="antialiased selection:bg-cyan-400 selection:text-black">
-        {children}
+        <NavigationProvider>{children}</NavigationProvider>
       </body>
     </html>
   );
