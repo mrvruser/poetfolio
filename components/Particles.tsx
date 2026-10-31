@@ -27,11 +27,11 @@ export default function Particles() {
     let height = 0;
 
     const goldPalette = [
-      "rgba(255, 243, 141, 0.95)",
-      "rgba(255, 205, 64, 0.90)",
-      "rgba(255, 223, 1, 0.85)",
-      "rgba(255, 215, 0, 0.90)",
-      "rgba(255, 240, 102, 0.85)",
+      "rgba(184, 134, 11, 0.55)",
+      "rgba(139, 90, 43, 0.45)",
+      "rgba(205, 133, 63, 0.50)",
+      "rgba(218, 165, 32, 0.50)",
+      "rgba(160, 110, 40, 0.40)",
     ];
 
     const resize = () => {

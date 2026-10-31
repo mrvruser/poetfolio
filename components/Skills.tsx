@@ -1,12 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  SkillsAIIcon,
+  SkillsWebIcon,
+  SkillsDatabaseIcon,
+  SkillsProgrammingIcon,
+  SkillsToolsIcon,
+  SkillsLeadershipIcon,
+} from "@/components/Icons";
 
 export default function Skills() {
   const skillCategories = [
     {
       category: "Artificial Intelligence & Data Science",
-      icon: "🧠",
+      icon: <SkillsAIIcon size={26} className="text-accent-theme" />,
       skills: [
         "Machine Learning",
         "Deep Learning",
@@ -24,7 +32,7 @@ export default function Skills() {
     },
     {
       category: "Full Stack & Web Engineering",
-      icon: "⚡",
+      icon: <SkillsWebIcon size={26} className="text-accent-theme" />,
       skills: [
         "React.js",
         "Next.js (App Router)",
@@ -40,7 +48,7 @@ export default function Skills() {
     },
     {
       category: "Databases, Cloud & Systems",
-      icon: "🗄️",
+      icon: <SkillsDatabaseIcon size={26} className="text-accent-theme" />,
       skills: [
         "PostgreSQL",
         "MySQL",
@@ -54,7 +62,7 @@ export default function Skills() {
     },
     {
       category: "Programming & Embedded Tech",
-      icon: "💻",
+      icon: <SkillsProgrammingIcon size={26} className="text-accent-theme" />,
       skills: [
         "Python (Proficient)",
         "SQL (Proficient)",
@@ -67,7 +75,7 @@ export default function Skills() {
     },
     {
       category: "Tools, Creative Media & Workflows",
-      icon: "🛠️",
+      icon: <SkillsToolsIcon size={26} className="text-accent-theme" />,
       skills: [
         "Git & GitHub",
         "VS Code",
@@ -82,7 +90,7 @@ export default function Skills() {
     },
     {
       category: "Leadership, Research & Governance",
-      icon: "🏛️",
+      icon: <SkillsLeadershipIcon size={26} className="text-accent-theme" />,
       skills: [
         "Incubation Governance (MSEC-IIF)",
         "IIT Bombay NEC Track Lead",
@@ -95,7 +103,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="relative py-24 px-6 sm:px-10 lg:px-20 transition-colors duration-400">
+    <section id="skills" className="relative py-24 px-5 sm:px-8 lg:px-12 transition-colors duration-400">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -115,23 +123,25 @@ export default function Skills() {
           {skillCategories.map((cat, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -4 }}
+              whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
-              className="p-6 sm:p-7 rounded-3xl border border-theme bg-card-theme shadow-sm flex flex-col justify-between"
+              className="p-6 sm:p-7 rounded-3xl border border-theme bg-card-theme/90 backdrop-blur-sm shadow-sm hover:border-accent-theme transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{cat.icon}</span>
-                  <h3 className="font-bold font-serif-title text-base sm:text-lg text-primary">
+                <div className="flex items-center gap-3.5 mb-5 pb-4 border-b border-theme">
+                  <div className="w-11 h-11 rounded-2xl border border-theme bg-surface-theme/80 flex items-center justify-center group-hover:scale-105 group-hover:border-accent-theme transition-all duration-300">
+                    {cat.icon}
+                  </div>
+                  <h3 className="font-bold font-serif-title text-base sm:text-lg text-primary leading-tight">
                     {cat.category}
                   </h3>
                 </div>
 
-                <div className="flex flex-wrap gap-2 pt-2">
+                <div className="flex flex-wrap gap-2 pt-1">
                   {cat.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="px-3 py-1 rounded-xl text-xs font-medium border border-theme bg-surface-theme/80 text-secondary hover:text-primary transition-colors"
+                      className="px-3 py-1.5 rounded-xl text-xs font-medium border border-theme bg-surface-theme/70 text-secondary hover:text-primary hover:border-accent-theme transition-all"
                     >
                       {skill}
                     </span>
@@ -145,4 +155,3 @@ export default function Skills() {
     </section>
   );
 }
-

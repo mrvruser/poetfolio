@@ -3,6 +3,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Project } from "@/data/projects";
+import {
+  CloseIcon,
+  ExternalLinkIcon,
+  EmailIcon,
+  WhatsAppIcon,
+  CreationsIcon,
+} from "@/components/Icons";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -42,7 +49,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
     <AnimatePresence>
       <div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 backdrop-blur-md bg-black/70"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 backdrop-blur-md bg-black/75"
         onClick={onClose}
         role="dialog"
         aria-modal="true"
@@ -56,24 +63,27 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           onClick={(e) => e.stopPropagation()}
           className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 sm:p-8 border shadow-2xl transition-colors duration-300"
           style={{
-            backgroundColor: "var(--bg-card)",
+            backgroundColor: "var(--glass-card-bg)",
             borderColor: "var(--border-accent)",
             color: "var(--text-primary)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
           }}
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-full border border-theme hover:scale-105 transition-all text-secondary"
+            className="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-2xl border border-theme hover:border-accent-theme hover:scale-105 active:scale-95 transition-all text-secondary hover:text-primary bg-surface-theme/70"
             aria-label="Close project modal"
           >
-            ✕
+            <CloseIcon size={18} />
           </button>
 
           {/* Category & Authorship Badge */}
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-surface-theme border border-theme text-accent-theme">
-              {project.category}
+            <span className="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-surface-theme border border-theme text-accent-theme inline-flex items-center gap-1.5">
+              <CreationsIcon size={12} />
+              <span>{project.category}</span>
             </span>
             <span className="text-xs text-secondary italic">
               • {project.authorship}
@@ -81,7 +91,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Title & Tagline */}
-          <h2 id="modal-title" className="text-2xl sm:text-3xl font-bold font-serif-title mb-2">
+          <h2 id="modal-title" className="text-2xl sm:text-3xl font-bold font-serif-title mb-2 pr-10">
             {project.title}
           </h2>
           <p className="text-sm font-medium mb-6 text-accent-theme">
@@ -129,10 +139,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-xl font-medium text-sm border border-theme hover:scale-105 transition-all inline-flex items-center gap-2 bg-surface-theme"
+                className="px-5 py-2.5 rounded-xl font-medium text-sm border border-theme hover:border-accent-theme hover:scale-105 transition-all inline-flex items-center gap-2 bg-surface-theme text-primary"
               >
                 <span>GitHub Repository</span>
-                <span>↗</span>
+                <ExternalLinkIcon size={15} />
               </a>
             )}
 
@@ -161,17 +171,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               <div className="flex flex-wrap gap-3">
                 <a
                   href={mailtoLink}
-                  className="px-4 py-2 rounded-lg text-xs font-medium border border-theme hover:bg-black/10 dark:hover:bg-white/10 transition-colors inline-flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-xl text-xs font-medium border border-theme bg-card-theme hover:border-accent-theme hover:text-accent-theme transition-colors inline-flex items-center gap-2"
                 >
-                  ✉️ Email Vijayaregunath
+                  <EmailIcon size={15} />
+                  <span>Email Vijayaregunath</span>
                 </a>
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg text-xs font-medium border border-theme hover:bg-black/10 dark:hover:bg-white/10 transition-colors inline-flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-xl text-xs font-medium border border-theme bg-card-theme hover:border-accent-theme hover:text-accent-theme transition-colors inline-flex items-center gap-2"
                 >
-                  💬 WhatsApp Direct
+                  <WhatsAppIcon size={15} />
+                  <span>WhatsApp Direct</span>
                 </a>
               </div>
             </motion.div>

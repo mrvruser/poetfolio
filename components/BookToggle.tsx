@@ -1,9 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { BookThemeIcon, BrainThemeIcon } from "@/components/Icons";
 
-export default function BookToggle() {
+interface BookToggleProps {
+  className?: string;
+  showLabel?: boolean;
+}
+
+export default function BookToggle({ className = "", showLabel = true }: BookToggleProps) {
   const [isDark, setIsDark] = useState<boolean>(true);
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -15,7 +21,7 @@ export default function BookToggle() {
       setIsDark(darkActive);
       document.documentElement.classList.toggle("dark", darkActive);
     } else {
-      // Default to dark mode as requested in tech identity
+      // Default to technological dark mode as established in Poetfolio identity
       setIsDark(true);
       document.documentElement.classList.add("dark");
     }
@@ -30,17 +36,39 @@ export default function BookToggle() {
 
   if (!mounted) {
     return (
-      <div className="fixed top-5 right-5 z-50 w-12 h-12 rounded-xl border border-cyan-400/40 bg-[#101217]" />
+      <div
+        className={`w-11 h-11 rounded-2xl border border-cyan-400/30 bg-[#101319] flex items-center justify-center opacity-80 ${className}`}
+        aria-hidden="true"
+      >
+        <span className="w-5 h-5 rounded-full border border-cyan-400/40 animate-pulse" />
+      </div>
     );
   }
 
   return (
-    <div className="fixed top-5 right-5 z-50 flex items-center gap-3">
-      {/* Theme World Label Pill (Desktop Hint) */}
-      <span className="hidden md:inline-block px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase transition-all duration-300 backdrop-blur-md border shadow-sm border-theme bg-surface-theme text-secondary">
-        {isDark ? "Technological World" : "Literary World"}
-      </span>
+    <div className={`inline-flex items-center gap-3 ${className}`}>
+      {/* Theme World Pill Indicator (Responsive) */}
+      {showLabel && (
+        <span
+          className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase transition-all duration-300 backdrop-blur-md border shadow-sm"
+          style={{
+            borderColor: isDark ? "rgba(0, 245, 212, 0.25)" : "rgba(184, 134, 11, 0.3)",
+            backgroundColor: isDark ? "rgba(16, 19, 25, 0.75)" : "rgba(234, 219, 197, 0.8)",
+            color: isDark ? "#00F5D4" : "#B8860B",
+          }}
+        >
+          <span
+            className="w-2 h-2 rounded-full"
+            style={{
+              backgroundColor: isDark ? "#00F5D4" : "#B8860B",
+              boxShadow: isDark ? "0 0 8px #00F5D4" : "0 0 8px #B8860B",
+            }}
+          />
+          {isDark ? "Digital World" : "Literary World"}
+        </span>
+      )}
 
+      {/* Interactive Morphing Toggle Button */}
       <motion.button
         type="button"
         onClick={toggleTheme}
@@ -50,50 +78,55 @@ export default function BookToggle() {
             toggleTheme();
           }
         }}
-        whileHover={{ scale: 1.08 }}
+        whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
-        animate={{ rotateY: isDark ? 180 : 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="w-12 h-12 flex items-center justify-center rounded-xl border transition-shadow focus:outline-none focus:ring-2 focus:ring-offset-2"
+        className="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-2xl border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 overflow-hidden shadow-md group"
         style={{
-          transformStyle: "preserve-3d",
-          backgroundColor: isDark ? "#101217" : "#EADECA",
+          backgroundColor: isDark ? "rgba(16, 19, 25, 0.9)" : "rgba(244, 232, 210, 0.9)",
           borderColor: isDark ? "#00F5D4" : "#B8860B",
           boxShadow: isDark
-            ? "0 0 16px rgba(0, 245, 212, 0.45)"
-            : "0 0 16px rgba(184, 134, 11, 0.35)",
+            ? "0 0 18px rgba(0, 245, 212, 0.35)"
+            : "0 0 18px rgba(184, 134, 11, 0.28)",
         }}
-        aria-label={`Switch to ${isDark ? "Literary World (Light)" : "Technological World (Dark)"}`}
-        title={`Toggle to ${isDark ? "Literary Mode" : "Technological Mode"}`}
+        aria-label={`Switch to ${isDark ? "Literary World (Book)" : "Digital World (Brain)"}`}
+        title={`Toggle universe: currently in ${isDark ? "Digital World (Dark)" : "Literary World (Light)"}`}
       >
-        {/* FRONT: BOOK (Visible when rotateY is 0 -> Light Mode) */}
+        {/* Subtle radial ambient background glow */}
         <div
-          className="absolute inset-0 flex items-center justify-center text-xl select-none"
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          <span role="img" aria-label="Book Icon" className="drop-shadow-sm">
-            📖
-          </span>
-        </div>
-
-        {/* BACK: BRAIN / NEURAL TECH (Visible when rotateY is 180 -> Dark Mode) */}
-        <div
-          className="absolute inset-0 flex items-center justify-center text-xl select-none"
+          className="absolute inset-0 opacity-40 transition-opacity duration-300 group-hover:opacity-75"
           style={{
-            transform: "rotateY(180deg)",
-            backfaceVisibility: "hidden",
+            background: isDark
+              ? "radial-gradient(circle, rgba(0, 245, 212, 0.25) 0%, transparent 70%)"
+              : "radial-gradient(circle, rgba(184, 134, 11, 0.25) 0%, transparent 70%)",
           }}
-        >
-          <span
-            role="img"
-            aria-label="Neural Brain Icon"
-            style={{
-              filter: "drop-shadow(0 0 6px #00F5D4)",
-            }}
-          >
-            🧠
-          </span>
-        </div>
+        />
+
+        {/* Animate Presence between Book and Brain */}
+        <AnimatePresence mode="wait" initial={false}>
+          {isDark ? (
+            <motion.div
+              key="brain"
+              initial={{ rotate: -70, scale: 0.5, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              exit={{ rotate: 70, scale: 0.5, opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 text-[#00F5D4] flex items-center justify-center drop-shadow-[0_0_8px_rgba(0,245,212,0.6)]"
+            >
+              <BrainThemeIcon size={24} strokeWidth={1.8} />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="book"
+              initial={{ rotate: 70, scale: 0.5, opacity: 0 }}
+              animate={{ rotate: 0, scale: 1, opacity: 1 }}
+              exit={{ rotate: -70, scale: 0.5, opacity: 0 }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 text-[#B8860B] flex items-center justify-center drop-shadow-[0_0_6px_rgba(184,134,11,0.5)]"
+            >
+              <BookThemeIcon size={24} strokeWidth={1.8} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.button>
     </div>
   );

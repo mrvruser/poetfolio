@@ -6,40 +6,49 @@ import Image from "next/image";
 import { CERTIFIDES, CertificateItem } from "@/data/certifides";
 import { COLLEGE_LIFE, CollegeLifeItem } from "@/data/college_life";
 import { EXPLORES, ExploreItem } from "@/data/explores";
-import { ACHIEVEMENTS, AchievementItem } from "@/data/achievements";
+import {
+  OdysseyExploresIcon,
+  OdysseyProjectsIcon,
+  OdysseyCertifidesIcon,
+  OdysseyCollegeIcon,
+  SearchIcon,
+  ExternalLinkIcon,
+  DocumentResumeIcon,
+  ArrowRightIcon,
+  SparklesIcon,
+} from "@/components/Icons";
 
 export default function LearningOdyssey() {
   const [activeTab, setActiveTab] = useState<"explores" | "projects" | "certifides" | "college">("certifides");
   const [certSearch, setCertSearch] = useState<string>("");
   const [certIssuerFilter, setCertIssuerFilter] = useState<string>("All");
-  const [selectedCert, setSelectedCert] = useState<CertificateItem | null>(null);
 
   const chapters = [
     {
       id: "explores" as const,
       title: "Explores",
-      icon: "🧭",
+      icon: <OdysseyExploresIcon size={24} className="text-accent-theme" />,
       subtitle: "Beyond familiar horizons, every journey leaves a story worth remembering.",
       badge: "Inquiries & Science",
     },
     {
       id: "projects" as const,
       title: "Projects",
-      icon: "⚡",
+      icon: <OdysseyProjectsIcon size={24} className="text-accent-theme" />,
       subtitle: "From the first line of code to solutions shaped by curiosity and persistence.",
       badge: "Hands-on Code",
     },
     {
       id: "certifides" as const,
       title: "Certifides",
-      icon: "📜",
+      icon: <OdysseyCertifidesIcon size={24} className="text-accent-theme" />,
       subtitle: "Every certificate marks a lesson learned; every skill opens another door.",
-      badge: `${CERTIFIDES.length} Verified Credentials`,
+      badge: `${CERTIFIDES.length} Credentials`,
     },
     {
       id: "college" as const,
       title: "College Life",
-      icon: "🏛️",
+      icon: <OdysseyCollegeIcon size={24} className="text-accent-theme" />,
       subtitle: "Beyond classrooms and deadlines, these are the moments that make the journey unforgettable.",
       badge: "Leadership & Campus",
     },
@@ -64,23 +73,23 @@ export default function LearningOdyssey() {
   }, [certSearch, certIssuerFilter]);
 
   return (
-    <section id="odyssey" className="relative py-28 px-6 sm:px-10 lg:px-20 transition-colors duration-400">
+    <section id="odyssey" className="relative py-28 px-5 sm:px-8 lg:px-12 transition-colors duration-400 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Intro */}
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-widest font-semibold px-4 py-1.5 rounded-full border border-theme bg-surface-theme text-accent-theme inline-block mb-3">
             Signature Narrative
           </span>
-          <h2 className="text-3xl sm:text-5xl font-bold font-serif-title mb-6">
+          <h2 className="text-3xl sm:text-5xl font-bold font-serif-title mb-5">
             THE LEARNING ODYSSEY
           </h2>
-          <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-secondary italic">
+          <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-secondary italic font-serif-title">
             “From curious footsteps across new horizons to ideas shaped through code, every experience becomes a chapter in my journey. This is where learning meets adventure, where discoveries become memories, and where every milestone tells a story.”
           </p>
         </div>
 
         {/* 4 Chapter Tab Selector */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 mb-12">
           {chapters.map((chap) => {
             const isActive = activeTab === chap.id;
             return (
@@ -88,20 +97,22 @@ export default function LearningOdyssey() {
                 key={chap.id}
                 type="button"
                 onClick={() => setActiveTab(chap.id)}
-                className={`p-4 sm:p-5 rounded-2xl border text-left transition-all duration-300 flex flex-col justify-between ${
+                className={`p-4 sm:p-5 rounded-3xl border text-left transition-all duration-300 flex flex-col justify-between group ${
                   isActive
                     ? "scale-103 shadow-lg"
-                    : "border-theme bg-surface-theme/50 hover:bg-surface-theme text-secondary"
+                    : "border-theme bg-surface-theme/50 hover:bg-surface-theme/80 hover:border-accent-theme text-secondary"
                 }`}
                 style={{
-                  backgroundColor: isActive ? "var(--bg-card)" : undefined,
+                  backgroundColor: isActive ? "var(--glass-card-bg)" : undefined,
                   borderColor: isActive ? "var(--accent-primary)" : undefined,
                   boxShadow: isActive ? "0 0 20px var(--accent-glow)" : undefined,
                 }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-2xl">{chap.icon}</span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-theme">
+                  <div className="w-10 h-10 rounded-2xl border border-theme bg-surface-theme/80 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    {chap.icon}
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-theme bg-surface-theme/80 text-secondary">
                     {chap.badge}
                   </span>
                 </div>
@@ -123,10 +134,12 @@ export default function LearningOdyssey() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="p-6 sm:p-10 rounded-3xl border shadow-xl"
+            className="p-6 sm:p-10 rounded-[2rem] border shadow-xl"
             style={{
-              backgroundColor: "var(--bg-card)",
+              backgroundColor: "var(--glass-card-bg)",
               borderColor: "var(--border-subtle)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
             }}
           >
             {/* Header of Active Chapter */}
@@ -152,13 +165,13 @@ export default function LearningOdyssey() {
                   {EXPLORES.map((ex) => (
                     <div
                       key={ex.id}
-                      className="p-6 rounded-3xl border border-theme bg-surface-theme/70 space-y-4 hover:border-accent-theme transition-colors"
+                      className="p-6 rounded-3xl border border-theme bg-surface-theme/70 space-y-4 hover:border-accent-theme transition-all duration-300"
                     >
                       <div className="flex items-center justify-between">
                         <span className="text-xs uppercase font-bold tracking-wider text-accent-theme">
                           Deep-Tech Inquiry
                         </span>
-                        <span className="text-[11px] text-secondary">{ex.date.slice(0, 10)}</span>
+                        <span className="text-[11px] text-secondary font-mono">{ex.date.slice(0, 10)}</span>
                       </div>
                       <h4 className="text-xl font-bold font-serif-title text-primary">
                         {ex.title}
@@ -220,11 +233,11 @@ export default function LearningOdyssey() {
                 <div className="text-center pt-4">
                   <a
                     href="/projects"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-[#08090C] bg-cyan-400 hover:scale-105 transition-transform"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-wider text-[#08090C] hover:scale-105 transition-transform shadow-md"
                     style={{ backgroundColor: "var(--accent-primary)" }}
                   >
                     <span>View All 14 Creations & Repositories</span>
-                    <span>→</span>
+                    <ArrowRightIcon size={15} />
                   </a>
                 </div>
               </div>
@@ -250,20 +263,23 @@ export default function LearningOdyssey() {
                 {/* Filter and Search Bar */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-b border-theme pb-6">
                   <div className="relative flex-1 max-w-md">
+                    <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-tertiary pointer-events-none">
+                      <SearchIcon size={16} />
+                    </div>
                     <input
                       type="text"
                       placeholder="Search credentials (e.g. Python, LLM, Deep Learning, AWS, Cisco)..."
                       value={certSearch}
                       onChange={(e) => setCertSearch(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-theme bg-surface-theme text-xs text-primary placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-theme bg-surface-theme text-xs text-primary placeholder-gray-400 focus:outline-none focus:border-accent-theme"
                     />
                   </div>
-                  <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 text-xs">
-                    <span className="text-secondary whitespace-nowrap">Filter:</span>
+                  <div className="flex items-center gap-2 max-w-full overflow-x-auto pb-1 sm:pb-0 text-xs">
+                    <span className="text-secondary whitespace-nowrap">Filter Issuer:</span>
                     <select
                       value={certIssuerFilter}
                       onChange={(e) => setCertIssuerFilter(e.target.value)}
-                      className="px-3 py-2 rounded-xl border border-theme bg-surface-theme text-primary text-xs focus:outline-none"
+                      className="max-w-[170px] sm:max-w-xs px-3 py-2 rounded-xl border border-theme bg-surface-theme text-primary text-xs focus:outline-none"
                     >
                       {issuers.slice(0, 8).map((iss) => (
                         <option key={iss} value={iss}>
@@ -279,7 +295,7 @@ export default function LearningOdyssey() {
                   {filteredCerts.slice(0, 18).map((c) => (
                     <div
                       key={c.id}
-                      className="p-5 rounded-2xl border border-theme bg-surface-theme flex flex-col justify-between hover:border-accent-theme transition-all duration-300 shadow-sm"
+                      className="p-5 rounded-2xl border border-theme bg-surface-theme/70 flex flex-col justify-between hover:border-accent-theme transition-all duration-300 shadow-sm group"
                     >
                       <div className="space-y-3">
                         <div className="flex items-center justify-between">
@@ -291,13 +307,14 @@ export default function LearningOdyssey() {
                           </span>
                         </div>
 
-                        <h4 className="text-base font-bold font-serif-title leading-snug text-primary">
+                        <h4 className="text-base font-bold font-serif-title leading-snug text-primary group-hover:text-accent-theme transition-colors">
                           {c.title}
                         </h4>
 
                         {c.score && (
-                          <div className="inline-block px-2.5 py-1 rounded-lg bg-card-theme border border-theme text-xs font-semibold text-accent-theme">
-                            ⭐ {c.score}
+                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-card-theme border border-theme text-xs font-semibold text-accent-theme">
+                            <SparklesIcon size={12} />
+                            <span>{c.score}</span>
                           </div>
                         )}
 
@@ -315,7 +332,7 @@ export default function LearningOdyssey() {
                             className="text-xs font-semibold text-accent-theme hover:underline inline-flex items-center gap-1.5"
                           >
                             <span>View Original PDF</span>
-                            <span>↗</span>
+                            <ExternalLinkIcon size={13} />
                           </a>
                         ) : (
                           <span className="text-xs text-secondary">Verified Record</span>
@@ -325,10 +342,11 @@ export default function LearningOdyssey() {
                           <a
                             href={c.pdfUrl!}
                             download
-                            className="p-1.5 rounded-lg border border-theme hover:bg-card-theme text-xs"
+                            className="p-1.5 rounded-lg border border-theme hover:border-accent-theme hover:text-accent-theme text-xs transition-colors"
                             title="Download Certificate PDF"
+                            aria-label="Download Certificate PDF"
                           >
-                            📄
+                            <DocumentResumeIcon size={15} />
                           </a>
                         )}
                       </div>
@@ -355,14 +373,14 @@ export default function LearningOdyssey() {
                   {COLLEGE_LIFE.slice(0, 9).map((cl) => (
                     <div
                       key={cl.id}
-                      className="p-5 rounded-2xl border border-theme bg-surface-theme space-y-4 hover:border-accent-theme transition-colors flex flex-col justify-between"
+                      className="p-5 rounded-2xl border border-theme bg-surface-theme/70 space-y-4 hover:border-accent-theme transition-all duration-300 flex flex-col justify-between"
                     >
                       <div className="space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="text-[10px] uppercase font-bold tracking-wider text-accent-theme">
                             Campus Life
                           </span>
-                          <span className="text-[10px] text-secondary">{cl.date.slice(0, 10)}</span>
+                          <span className="text-[10px] text-secondary font-mono">{cl.date.slice(0, 10)}</span>
                         </div>
                         <h4 className="text-base font-bold font-serif-title text-primary">
                           {cl.title}

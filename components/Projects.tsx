@@ -4,6 +4,7 @@ import { useState } from "react";
 import { projects, Project } from "@/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectModal from "@/components/ProjectModal";
+import { ArrowRightIcon, SparklesIcon, CreationsIcon } from "@/components/Icons";
 
 export default function Projects() {
   const [filter, setFilter] = useState<string>("All");
@@ -17,7 +18,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="relative py-24 px-6 sm:px-10 lg:px-20 transition-colors duration-400">
+    <section id="projects" className="relative py-24 px-5 sm:px-8 lg:px-12 transition-colors duration-400">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -41,16 +42,16 @@ export default function Projects() {
                 key={cat}
                 type="button"
                 onClick={() => setFilter(cat)}
-                className={`px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 border ${
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 border ${
                   active
                     ? "shadow-md scale-105"
-                    : "hover:scale-102 border-theme bg-surface-theme/50 text-secondary hover:text-primary"
+                    : "hover:scale-102 border-theme bg-surface-theme/60 text-secondary hover:text-primary hover:border-accent-theme"
                 }`}
                 style={{
                   backgroundColor: active ? "var(--accent-primary)" : undefined,
                   borderColor: active ? "var(--accent-primary)" : undefined,
                   color: active ? "#08090C" : undefined,
-                  boxShadow: active ? "0 0 15px var(--accent-glow)" : undefined,
+                  boxShadow: active ? "0 0 16px var(--accent-glow)" : undefined,
                 }}
               >
                 {cat}
@@ -74,25 +75,29 @@ export default function Projects() {
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
                 className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl border transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl"
                 style={{
-                  backgroundColor: "var(--bg-card)",
+                  backgroundColor: "var(--glass-card-bg)",
                   borderColor: "var(--border-subtle)",
+                  backdropFilter: "blur(14px)",
+                  WebkitBackdropFilter: "blur(14px)",
                 }}
               >
                 <div>
                   {/* Category & Status Indicator */}
                   <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-theme bg-surface-theme text-accent-theme">
-                      {p.category}
+                    <span className="text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-theme bg-surface-theme text-accent-theme inline-flex items-center gap-1.5">
+                      <CreationsIcon size={12} />
+                      <span>{p.category}</span>
                     </span>
                     {p.featured && (
-                      <span className="text-[10px] font-semibold tracking-wide uppercase px-2.5 py-0.5 rounded-full border border-theme bg-surface-theme text-secondary">
-                        ★ Featured
+                      <span className="text-[10px] font-semibold tracking-wide uppercase px-2.5 py-0.5 rounded-full border border-accent-theme bg-surface-theme text-accent-theme inline-flex items-center gap-1">
+                        <SparklesIcon size={11} />
+                        <span>Featured</span>
                       </span>
                     )}
                   </div>
 
                   {/* Title & Tagline */}
-                  <h3 className="text-xl sm:text-2xl font-bold font-serif-title mb-2 group-hover:text-accent-theme transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold font-serif-title mb-2 group-hover:text-accent-theme transition-colors leading-snug">
                     {p.title}
                   </h3>
                   <p className="text-xs font-medium text-accent-theme mb-3">
@@ -100,7 +105,7 @@ export default function Projects() {
                   </p>
 
                   {/* Short Description */}
-                  <p className="text-sm leading-relaxed text-secondary mb-6">
+                  <p className="text-sm leading-relaxed text-secondary mb-6 line-clamp-3">
                     {p.description}
                   </p>
                 </div>
@@ -126,7 +131,11 @@ export default function Projects() {
                   {/* Footer Action */}
                   <div className="pt-4 border-t border-theme flex items-center justify-between text-xs font-semibold text-accent-theme">
                     <span>Explore Architecture & Metrics</span>
-                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                    <ArrowRightIcon
+                      size={15}
+                      strokeWidth={2}
+                      className="transform group-hover:translate-x-1.5 transition-transform"
+                    />
                   </div>
                 </div>
               </motion.div>
