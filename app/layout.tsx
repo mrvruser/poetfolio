@@ -26,25 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable}`}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var saved = localStorage.getItem("poetfolio_theme");
-                  if (saved === "light") {
-                    document.documentElement.classList.remove("dark");
-                  } else {
-                    document.documentElement.classList.add("dark");
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
-      </head>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${playfair.variable} dark`}>
       <body className="antialiased selection:bg-cyan-400 selection:text-black">
         {children}
       </body>
